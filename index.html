@@ -153,18 +153,18 @@
               </div>
             </div>
           </section>
-          <section class="solutions flex-columns">
+          <section class="solutions flex-columns ">
             <div class="row">
               <div class="column">
                 <div class="column-1">
                   <img src="assets/images/pexels-fauxels-3184423 (1).jpg" alt="" />
                 </div>
               </div>
-              <div class="column">
-                <div class="column-2 bg-primary">
+              <div class="column ">
+                <div class="column-2 bg-primary vizyon">
                   
                   <h2>Vizyon</h2>
-                  <p class="animationH">
+                  <p class="animationH fontS">
                     Kurmak istediğimiz gelecekte toplumdaki her birey, psikolojik desteğe erişim sağlayabilecektir. Psikolojik danışma alanında çalışan psikolog ve psikolojik danışmanların mesleki yeterliliklerini kazanmaları ve toplumun ihtiyaçlarına yanıt verebilmeleri desteklenecektir. Psikolojik danışman/psikolog, süpervizör ve toplumun bir araya geldiği bir platform kurularak sağlıklı birey-sağlıklı toplum anlayışı hayata geçirilecektir
                   </p>
                  
@@ -198,7 +198,7 @@
               </div>
             </div>
           </section>
-          <section class="solutions flex-columns">
+          <section id="Hedeflerimiz" class="solutions flex-columns">
             <div class="row">
               <div class="column">
                 <div class="column-1">
@@ -800,15 +800,29 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
+  
+
+</script>
+<script>
+  function mediaQ(x) {
+    
+  if (x.matches) { // If media query matches
+    return 1;
+  } else {
+    return 2;
+  }
+}
+  let listener=window.matchMedia("(max-width: 768px)");
+  
     var swiper = new Swiper('.swiper-container', {
       effect: 'coverflow',
       grabCursor: true,
       centeredSlides: false,
-      slidesPerView: 1,
+      slidesPerView: mediaQ(listener),
       coverflowEffect: {
         rotate: 0,
         stretch: 30,
-        depth: 50,
+        depth: 100,
         modifier: 1,
         slideShadows: false,
       },
